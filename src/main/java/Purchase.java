@@ -1,9 +1,9 @@
 import java.util.Map;
 
-public class Purchase {
+public class Purchase{
     protected String title;
     protected int count;
-    protected Purchase[] purchases = new Purchase[Product.products.size()]; // Здесь было "магическое число"
+    protected Purchase[] purchases; // Здесь было "магическое число"
 
     public Purchase(String title, int count) {
         this.title = title;
@@ -11,6 +11,7 @@ public class Purchase {
     }
 
     public Purchase() {
+        this.purchases = new Purchase[Product.getProducts().size()];
     }
 
     public void addPurchase(String title, int count) {

@@ -17,7 +17,7 @@ public class Ui {
             purchase.addPurchase(product, count);
             System.out.println("Вы добавили в корзину: " + product + " " + count + " шт.");
         }
-        long sum = purchase.sum(Product.products);
+        long sum = purchase.sum(Product.getProducts());
         System.out.println("ИТОГО: " + sum);
     }
 
